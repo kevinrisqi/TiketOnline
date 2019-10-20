@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="220dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="52dp"
         android:background="@drawable/btn_primary"
         android:text="Get Started"
