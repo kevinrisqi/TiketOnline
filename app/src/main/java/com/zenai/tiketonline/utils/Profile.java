@@ -1,17 +1,39 @@
 package com.zenai.tiketonline.utils;
 
-public class Profile {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Profile implements Parcelable {
     private String name;
     private String bio;
     private String city;
     private int age;
 
-    public Profile(String name, String bio, String city, int age) {
+    public Profile(String name, String city, int age, String bio) {
         this.name = name;
         this.bio = bio;
         this.city = city;
         this.age = age;
     }
+
+    protected Profile(Parcel in) {
+        name = in.readString();
+        bio = in.readString();
+        city = in.readString();
+        age = in.readInt();
+    }
+
+    public static final Creator<Profile> CREATOR = new Creator<Profile>() {
+        @Override
+        public Profile createFromParcel(Parcel in) {
+            return new Profile(in);
+        }
+
+        @Override
+        public Profile[] newArray(int size) {
+            return new Profile[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -53,5 +75,18 @@ public class Profile {
                 ", city='" + city + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(bio);
+        parcel.writeString(city);
+        parcel.writeInt(age);
     }
 }
