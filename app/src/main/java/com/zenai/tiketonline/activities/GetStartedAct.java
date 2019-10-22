@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.zenai.tiketonline.R;
 import com.zenai.tiketonline.fragments.ProfileFragment;
@@ -39,20 +40,25 @@ public class GetStartedAct extends AppCompatActivity {
         btnGetStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = nameInput.getText().toString();
-                String city = cityInput.getText().toString();
-                int age = Integer.parseInt(ageInput.getText().toString());
-                String bio = bioInput.getText().toString();
-                Profile profile = new Profile(name,city,age,bio);
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("PROFILE_KEY",profile);
-                Fragment result = new ProfileFragment();
-                result.setArguments(bundle);
+
+//                String name = nameInput.getText().toString();
+//                String city = cityInput.getText().toString();
+//                int age = Integer.parseInt(ageInput.getText().toString());
+//                String bio = bioInput.getText().toString();
+//                Profile profile = new Profile(name,city,age,bio);
+//                Bundle bundle = new Bundle();
+//                bundle.putParcelable("PROFILE_KEY",profile);
+//                String coba = profile.toString();
+//                Toast.makeText(GetStartedAct.this,coba, Toast.LENGTH_SHORT).show();
+                ProfileFragment result = new ProfileFragment();
+                //result.setArguments(bundle);
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container,new ProfileFragment());
+                fragmentTransaction.replace(R.id.fragment_container, result);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
     }
+
+
 }

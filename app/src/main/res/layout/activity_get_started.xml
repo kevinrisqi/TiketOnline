@@ -56,7 +56,7 @@
         android:background="@drawable/bg_input"
         android:hint="Your Name"
         android:paddingLeft="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnGet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
@@ -69,7 +69,7 @@
         android:background="@drawable/bg_input"
         android:hint="Your City"
         android:paddingLeft="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnGet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,7 +83,7 @@
         android:hint="Your Age"
         android:inputType="numberSigned"
         android:paddingLeft="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnGet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
@@ -92,11 +92,11 @@
         android:id="@+id/input_bio"
         android:layout_width="260dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/bg_input"
         android:hint="Your Bio"
         android:paddingLeft="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnGet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
